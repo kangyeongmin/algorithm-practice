@@ -10,16 +10,17 @@ function solution(genres, plays) {
         
         playlist[genres[i]].push([plays[i],i])
     }
-    Object.keys(playlist).map((genre) => {
-        playlist[genre] = playlist[genre].sort((a,b) => {
-            if(b[0] === a[0]) return a[1] - b[1] 
-            return b[0]-a[0]
-        })
-    })
+//     Object.keys(playlist).map((genre) => {
+        
+//     })
 
     Object.keys(playlist).map((genre, index) => {
         const sum = playlist[genre].reduce((accumulator, currentValue) => accumulator                     + currentValue[0], 0,);
         order.push([genre, sum])
+        playlist[genre] = playlist[genre].sort((a,b) => {
+            if(b[0] === a[0]) return a[1] - b[1] 
+            return b[0]-a[0]
+        })
     })
     
     order.sort((a,b) => b[1] - a[1])
