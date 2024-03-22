@@ -1,3 +1,4 @@
+// 조합
 function combination(arr, selectNum) {
   if (selectNum === 1) return arr.map((v) => [v]);
 
@@ -11,6 +12,7 @@ function combination(arr, selectNum) {
   return result;
 }
 
+// 중복조합
 function combinationDup(arr, selectNum) {
   if (selectNum === 1) return arr.map((v) => [v]);
 
@@ -24,6 +26,7 @@ function combinationDup(arr, selectNum) {
   return result;
 }
 
+// 순열
 function permutation(arr, selectNum) {
   if (selectNum === 1) return arr.map((v) => [v]);
 
@@ -37,6 +40,7 @@ function permutation(arr, selectNum) {
   return result;
 }
 
+// 중복순열
 function permutationDup(arr, selectNum) {
   if (selectNum === 1) return arr.map((v) => [v]);
 
